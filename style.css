@@ -158,7 +158,7 @@ article header span {
     font-weight: 300;
 }
 
-article header span.date {
+article header .date {
     font-style: italic;
 }
 
