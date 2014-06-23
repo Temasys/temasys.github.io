@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:og="http://ogp.me/ns#"
+      xmlns:fb="http://www.facebook.com/2008/fbml">
+    <head>
+        <meta charset="utf-8"/>
+        <title>{% if page.title %} {{ page.title }} | {% endif %} {{ site.name }}</title>
+
+        <link rel="stylesheet" href="{{site.baseurl}}/style.css" />
+        <link rel="author" href="humans.txt"/>
+        <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="{{site.baseurl}}/feed.xml" />
+        <link rel="shortcut icon" href="favicon.png">
+        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,600,700' rel='stylesheet' type='text/css'>
+
+        <meta name="description" content="{{site.description}}"/>
+        <meta name="author" content="{{site.author}}"/>
+
+        <meta name="viewport" content="width=500, user-scalable=no">
+        <meta property="og:title" content="{% if page.title %} {{ page.title }} | {% endif %} {{site.name}}">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="{{site.baseurl}}">
+        <meta property="og:image" content="{{site.baseurl}}/og_image.png">
+        <meta property="og:site_name" content="{{site.name}}">
+        <meta property="og:description" content="{{site.description}}">
+    </head>
+
+    <body>
+        <div id="app">
+            <header>
+                <div>
+                    <a href="{{site.baseurl}}/"><img src="{{site.baseurl}}/resources/img/temasys.svg" border="0" /></a>
+                    <h1><a href="{{site.baseurl}}/">{{ site.name }}</a></h1>
+                </div>
+            </header>
+
+            <nav>
+                <ul>
+                    <li><a href="{{site.baseurl}}/feed.xml">RSS</a></li>
+                    <li><a href="{{site.baseurl}}/archive">Archive</a></li>
+                    <li><a href="{{site.baseurl}}/contact">Contact</a></li>
+                    <li><a href="{{site.baseurl}}/">Home</a></li>
+                </ul>
+            </nav>
+
+            <main>
+
+                {{ content }}
+
+            </main>
+
+            <footer>
+                <div>
+                    <hr />
+                    <p>&copy; <time>2014</time> {{ site.author }}</p>
+                </div>
+            </footer>
+        </div>
+
+        <script src="{{site.baseurl}}/scripts.js"></script>
+    </body>
+
+</html>

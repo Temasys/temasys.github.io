@@ -1,0 +1,193 @@
+body {
+    font-family: 'Source Sans Pro', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+#app > header {
+    width: 100%;
+    background: #eee;
+    height: 63px;
+}
+
+#app > header > div {
+    width: 780px;
+    padding-top: 2px;
+    margin: 0 auto;
+}
+
+#app > header img {
+    height: 50px;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: -10px;
+}
+
+#app > header h1 {
+    font-weight: 300;
+    font-size: 1.5em;
+    display: inline-block;
+}
+
+#app > header a {
+    color: #333;
+    text-shadow: -1px -1px 0 #eee;
+    text-decoration: none;
+}
+
+h2 {
+    color: #222;
+    font-size: 2em;
+    font-weight: 200;
+}
+
+hr {
+    margin-left: 0;
+    padding-left: 0;
+	width: 100%;
+	min-width: 840px;
+    border: 0;
+    border-top: 1px solid #ccc;
+}
+
+pre {
+    background-color: #E8E8E8;
+    margin-left: 30px;
+    padding: 5px;
+    width: 80%;
+}
+
+code {
+    background-color: #E8E8E8;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+pre {
+    background-color: #E8E8E8;
+    margin-left: 30px;
+    padding: 5px;
+    width: 80%;
+}
+
+table {
+    border: none;
+}
+
+td {
+    padding-left: 20px;
+}
+
+a:hover {
+    color: #696969;
+}
+
+#app > main {
+	width: 780px;
+	margin: 0 auto;
+	display: block;
+}
+
+#app > nav {
+    position: relative;
+    height: 0;
+}
+
+#app > nav > ul {
+	position: relative;
+    width: 780px;
+    margin: 0 auto;
+    top: -63px;
+}
+
+#app > nav > ul > li {
+    float: right;
+    height: 43px;
+    list-style: none;
+    padding: 10px;
+    line-height: 43px;
+}
+
+nav a,
+nav a:visited,
+nav a:active {
+    color: #555;
+    font-weight: 700;
+    text-shadow: -1px -1px 0 #eee;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #000;
+}
+
+footer {
+	clear: both;
+	width: 100%;
+}
+
+article {
+	margin: 10px 0;
+}
+
+article h2 > a,
+article h2 > a:visited,
+article h2 > a:active {
+    color: #222;
+    text-decoration: none;
+}
+
+article .entry {
+	margin-left: 5px;
+	padding: 10px;
+}
+
+article .entry img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+article header span {
+	margin-right: 10px;
+    color: #aaa;
+    font-weight: 300;
+}
+
+article header span.date {
+    font-style: italic;
+}
+
+article header h2 {
+    margin-bottom: 3px;
+}
+
+section address {
+    margin-left: 15px;
+}
+
+#paginator {
+    padding: 10px;
+}
+
+#paginator a {
+    text-decoration: none;
+}
+
+.more {
+    margin-left: 80%;
+}
+
+#app > footer {
+    width: 100%;
+}
+
+#app > footer > div {
+    width: 780px;
+    margin: 0 auto;
+    padding: 10px;
+    color: #aaa;
+    font-weight: 300;
+}
