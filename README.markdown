@@ -1,8 +1,8 @@
-Temasys Developers on github
+Temasys Developers on GitHub
 ===
 
 Info center for developers wanting to use Skyway and other Temasys Open Source web projects.
-Thanks to Luke Maciak for getting us started with his [Sample App][https://github.com/maciakl/Sample-Jekyll-Site]
+Thanks to Luke Maciak for getting us started with his [Jekyll Sample App][lm].
 
 
 Requirements to modify this site:
@@ -20,7 +20,7 @@ Development time dependencies:
 
 
 
-
+[lm]: https://github.com/maciakl/Sample-Jekyll-Site
 [rb]: http://www.ruby-lang.org/
 [gm]: http://rubygems.org/
 [jk]: https://github.com/mojombo/jekyll
