@@ -39,6 +39,12 @@ body {
     text-decoration: none;
 }
 
+h1 {
+    font-size: 3em;
+    font-weight: 200;
+    text-shadow: 1px 1px 1px #1abc9c, 2px 2px 1px #3498db, 3px 3px 1px #ff688b;
+}
+
 h2 {
     color: #222;
     font-size: 2em;
@@ -79,7 +85,16 @@ table {
 }
 
 td {
-    padding-left: 20px;
+    vertical-align: top;
+    padding: 0 5px;
+}
+
+td.date, td.categories {
+    width: 100px;
+}
+
+td.title {
+    width: 200px;
 }
 
 a:hover {
@@ -90,6 +105,10 @@ a:hover {
 	width: 780px;
 	margin: 0 auto;
 	display: block;
+}
+
+#app > main > section {
+    margin-bottom: 50px;
 }
 
 #app > nav {
@@ -124,6 +143,66 @@ nav a:active {
 
 nav a:hover {
     color: #000;
+}
+
+
+#home {
+    height: 335px;
+    position: relative;
+    background: url(resources/img/landscape.svg);
+    margin-bottom: 0 !important;
+}
+
+#home h1 {
+    position: absolute;
+    width: 100%;
+    top: 28%;
+    text-align: center;
+}
+
+#home p {
+    position: absolute;
+    width: 100%;
+    top: 54%;
+    text-align: center;
+}
+
+
+#projects ul {
+    padding: 0;
+    margin: 0;
+}
+
+#projects li {
+    display: inline-block;
+    list-style: none;
+    padding: 10px 25px;
+    background: #eee;
+    border: 1px solid #bbb;
+    box-shadow: 1px 1px 3px rgba(0,0,0,.2);
+    text-align: center;
+    cursor: pointer;
+    box-sizing: border-box;
+    margin-right: 25px;
+    width: 376px;
+    height: 200px;
+    vertical-align: middle;
+}
+
+#projects li:last-child {
+    margin-right: 0;
+}
+
+.project h2 {
+    text-shadow: -1px -1px 1px #eee;
+}
+
+.project .desc {
+    height: 2.3em;
+}
+
+.project p a {
+    color: darkblue;
 }
 
 footer {

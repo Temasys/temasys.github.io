@@ -3,7 +3,39 @@ layout: default
 title: Home
 ---
 
+<section id="home">
+    <h1>Build a web that communicates.</h1>
+    <p>With WebRTC and Open Source from Temasys</p>
+</section>
+
+
+<section id="projects">
+
+    <ul>
+        <li class="project" onclick="window.location = 'http://github.com/Temasys/SkywayJS';">
+            <h2>SkywayJS</h2>
+            <p class="desc">Teach your web-app talk peer-to-peer audio, video and data with WebRTC</p>
+            <p>
+                <a href="http://github.com/Temasys/SkywayJS">Getting Started</a> &nbsp; &#9642; &nbsp;
+                <a href="http://developer.temasys.com.sg/doc">Documentation</a> &nbsp; &#9642; &nbsp;
+                <a href="http://developer.temasys.com.sg/demo/">Demos</a>
+            </p>
+        </li>
+        <li class="project" onclick="window.location = 'http://github.com/Temasys/AdapterJS';">
+            <h2>AdapterJS</h2>
+            <p class="desc">One WebRTC API in all browsers that just works.</p>
+            <p>
+                <a href="http://github.com/Temasys/AdapterJS">Getting Started</a> &nbsp; &#9642; &nbsp;
+                <a href="http://github.com/Temasys/AdapterJS/wiki">Documentation</a>
+            </p>
+        </li>
+    </ul>
+
+</section>
+
+
 <!-- Show last 5 posts here -->
+<section id="posts">
 {% for post in paginator.posts %}
 	<article>
 
@@ -19,24 +51,24 @@ title: Home
 	</article>
 {% endfor %}
 
-
-<div id="paginator">
-    {% if paginator.next_page %}
-            <a href="{{site.baseurl}}/page{{paginator.next_page}}">
-            &laquo; Older Posts</a>
-    {% endif %}
-
-    {% if paginator.previous_page %}
-        {% if paginator.previous_page == 1 %}
-                <span class="more">
-                <a href="{{site.baseurl}}/">
-                Newer Posts &raquo; </a>
-                </span>
-        {% else %}
-                <span class="more">
-                <a href="{{site.baseurl}}/page{{paginator.previous_page}}">
-                Newer Posts &raquo; </a>
-                </span>
+    <div id="paginator">
+        {% if paginator.next_page %}
+                <a href="{{site.baseurl}}page{{paginator.next_page}}">
+                &laquo; Older Posts</a>
         {% endif %}
-    {% endif %}
-</div>
+
+        {% if paginator.previous_page %}
+            {% if paginator.previous_page == 1 %}
+                    <span class="more">
+                    <a href="{{site.baseurl}}">
+                    Newer Posts &raquo; </a>
+                    </span>
+            {% else %}
+                    <span class="more">
+                    <a href="{{site.baseurl}}page{{paginator.previous_page}}">
+                    Newer Posts &raquo; </a>
+                    </span>
+            {% endif %}
+        {% endif %}
+    </div>
+</section>
