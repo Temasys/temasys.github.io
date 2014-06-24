@@ -98,6 +98,10 @@ td.date, td.categories {
     font-weight: 200;
 }
 
+.category > a:before {
+    content: "#";
+}
+
 td.title {
     width: 200px;
 }
