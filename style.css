@@ -39,6 +39,10 @@ body {
     text-decoration: none;
 }
 
+a {
+    color: darkblue;
+}
+
 h1 {
     font-size: 3em;
     font-weight: 200;
@@ -86,11 +90,12 @@ table {
 
 td {
     vertical-align: top;
-    padding: 0 5px;
+    padding: 0 5px 15px;
 }
 
 td.date, td.categories {
     width: 100px;
+    font-weight: 200;
 }
 
 td.title {
@@ -199,10 +204,6 @@ nav a:hover {
 
 .project .desc {
     height: 2.3em;
-}
-
-.project p a {
-    color: darkblue;
 }
 
 footer {
