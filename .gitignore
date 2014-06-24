@@ -58,6 +58,7 @@ lib-cov
 *.out
 *.pid
 *.gz
+*.lock
 
 # Dreamweaver added files
 _notes
