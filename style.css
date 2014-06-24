@@ -226,7 +226,7 @@ nav.submenu a {
 #projects li {
     display: inline-block;
     list-style: none;
-    padding: 10px 25px;
+    padding: 7px 25px;
     background: #eee;
     border: 1px solid #bbb;
     box-shadow: 1px 1px 3px rgba(0,0,0,.2);
@@ -244,7 +244,9 @@ nav.submenu a {
 }
 
 .project h2 {
+    font-weight: 500;
     text-shadow: -1px -1px 1px #eee;
+    letter-spacing: -2px;
 }
 
 .project .desc {
@@ -280,13 +282,9 @@ article .entry img {
 }
 
 article header span {
-	margin-right: 10px;
+	margin-right: 3px;
     color: #aaa;
     font-weight: 300;
-}
-
-article header .date {
-    font-style: italic;
 }
 
 article header h2 {

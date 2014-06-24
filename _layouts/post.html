@@ -6,7 +6,6 @@ layout: default
         <header>
             <h2>{{ page.title }}</h2>
             <span class="date"><time datetime="{{page.date|date:"%F"}}">{{page.date|date:"%b %d, %Y"}}</time></span>
-            <span class="category">{{ page.categories | category_links }}</span>
             <span class="author">by {% if page.author %}{{page.author}}{% else %}{{site.author}}{% endif%}</span>
         </header>
 
