@@ -84,6 +84,10 @@ pre {
     width: 80%;
 }
 
+ul > li {
+    padding-bottom: 15px;
+}
+
 table {
     border: none;
 }
@@ -139,6 +143,7 @@ a:hover {
     padding: 10px;
     line-height: 43px;
     font-size: .9em;
+    margin: 0;
 }
 
 #app > nav .console a {
