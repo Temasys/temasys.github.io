@@ -249,6 +249,11 @@ nav.submenu a {
     letter-spacing: -2px;
 }
 
+.project h2 img {
+    height: 45px;
+    margin: -10px 0;
+}
+
 .project .desc {
     height: 2.3em;
 }
