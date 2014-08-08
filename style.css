@@ -125,15 +125,18 @@ a:hover {
 }
 
 #app > nav {
+    margin: 0 auto;
+    width: 780px;
     position: relative;
     height: 0;
 }
 
 #app > nav > ul {
-	position: relative;
+	position: absolute;
     width: 780px;
     margin: 0 auto;
     top: -63px;
+    right: 0;
 }
 
 #app > nav > ul > li {
@@ -327,4 +330,8 @@ section address {
     padding: 10px;
     color: #aaa;
     font-weight: 300;
+}
+
+.cp_embed_iframe {
+    border: 1px solid #222;
 }
