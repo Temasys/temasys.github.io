@@ -33,7 +33,7 @@ WebRTC is still a rather low-level browser API and requires you to do a lot of w
 
 When you use SkywayJS in your website or app, you can invite users (we call them "peers") to join a common space in which they can exchange data privately with each other. We call this space a "room". Every peer that wants to join a room needs to know its unique identifier, like a secure, generated token or a simple name. We leave it up to you on how you come up with these room IDs and how you inform peers about it. In most cases generating a [UUID](http://jsfiddle.net/briguy37/2MVFd/) might be the best idea to make sure the privacy of your users during the conversation is protected.
 
-You identify yourself to the Skyway Infrastructure with your unique "API key" that you can retrieve in our [Developer Console](https://developer.temasys.com.sg). Every API key creates a new "realm" in which your rooms can exist and only it works on your specified domain name. If you want to have a different website or app access the same realm and therefor the same rooms, you'll need to create a so called "Alias key".
+You identify yourself to the Skyway Infrastructure with your unique "API key" that you can retrieve in our [Developer Console](https://developer.temasys.com.sg). Every API key creates a new "realm" in which your rooms can exist. Every API key will only work on your specified [CORS domain name](http://en.wikipedia.org/wiki/Cross-origin_resource_sharing). If you want to have a different website or app access the same realm and therefor the same rooms, you'll need to create a so called "Alias key".
 
 ### Performance
 
@@ -49,7 +49,7 @@ To identify yourself against our API, you'll need to sign up through [Developer 
 
 ### Step 2: Include SkywayJS into your website
 
-Here you have the choice to use our "Complete" version with all dependencies or, if you want to do dependency management yourself with Bower, RequireJS or other client-side package managers, the "Library" version. [Here is an overview of these files](https://temasys.atlassian.net/wiki/display/TPD/Introducing+SkywayJS#IntroducingSkywayJS-Versionsupportandreleases).
+Here you have the choice to use our "Complete" version with all dependencies or, if you want to do dependency management yourself with [Bower](http://bower.io/), [RequireJS](http://requirejs.org/) or other client-side package managers, the "Library" version. [Here is an overview of these files](https://temasys.atlassian.net/wiki/display/TPD/Introducing+SkywayJS#IntroducingSkywayJS-Versionsupportandreleases).
 
 In our simple example above, we just include the complete version in a script tag in the header.
 
