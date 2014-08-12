@@ -73,7 +73,7 @@ By calling *init()* SkywayJS starts establishing a signaling connection with our
 
 You've created a simple video conference. Easy, right? You can find an overview of all the methods and events Skyway offers (like *lockRoom*, *disableAudio* or *disableVideo*, etc...) in our API doc. Find the right doc for the version of Skyway you're using [in our version history](https://temasys.atlassian.net/wiki/display/TPD/Introducing+SkywayJS#IntroducingSkywayJS-Versionsupportandreleases).
 
-Have fun and let us know if you run into any [issues](http://github.com/Temasys/SkywayJS/issues)!
+Have fun, share this and let us know if you run into any [issues](http://github.com/Temasys/SkywayJS/issues)!
 
 
 
