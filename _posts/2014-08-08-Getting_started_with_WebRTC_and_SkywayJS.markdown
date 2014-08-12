@@ -27,7 +27,7 @@ Temsys has created the super scalable Skyway infrastructure that helps to connec
 
 ### The SkywayJS library
 
-WebRTC is still a rather low-level browser API and requires you to do significant work around solving signaling issues and resolving differences in implementation between web browsers. We at Temasys are part of the [WebRTC working group at the W3C](http://www.w3.org/2011/04/webrtc-charter.html) and create solutions with and around WebRTC for a more than a year now. We know this part of the puzzle inside and out, and that is why we have created SkywayJS. We want to solve the connectivity and implementation headaches for you and let you focus on building the cool stuff.
+WebRTC is still a rather low-level browser API and requires you to do significant work around solving signaling issues and resolving differences in implementation between web browsers. We at Temasys are part of the [WebRTC working group at the W3C](http://www.w3.org/2011/04/webrtc-charter.html) and create solutions with and around WebRTC for more than a year now. We know this part of the puzzle inside and out, and that is why we have created SkywayJS. We want to solve the connectivity and implementation headaches for you and let you focus on building the cool stuff.
 
 ### API keys, alias keys, realms, rooms and peers
 
