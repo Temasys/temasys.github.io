@@ -10,7 +10,7 @@ excerpt: Building a simple audio/video conferencing website that doesn't need an
 
 You may have heard of WebRTC and its magical abilities recently and, like many, you might have found yourself struggling with trying to get even a simple demo going. The team here at Temasys built SkywayJS to address this and make it easy to build reliable peer connectivity solutions on any website with the help of WebRTC.
 
-Here is an example codepen that we've created that shows how you can create a very simple audio/video conference with merely 32 lines of JavaScript client-side code, with no server-code required on the site running the application.
+Here is an example codepen that we've created that shows how you can create a very simple audio/video conference with merely 32 lines of JavaScript client-side code, with no additional server-code required.
 
 <p data-height="440" data-theme-id="7751" data-slug-hash="nKvBu" data-default-tab="result" class='codepen'>See the Pen <a href='http://codepen.io/serrynaimo/pen/nKvBu/'>WebRTC with SkywayJS</a> by Thomas Gorissen (<a href='http://codepen.io/serrynaimo'>@serrynaimo</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
 <script async src="//codepen.io/assets/embed/ei.js"></script>
@@ -46,17 +46,17 @@ It's still early days for WebRTC, but assuming a modern multi-core processor and
 
 ### Step 1: Get an API key
 
-To identify yourself against our API, you'll need to sign up through [Developer Console](https://developer.temasys.com.sg) and get an API key. DDuring our current beta phase, the usage of our platform is free, however once we are out of beta there is a tiny per-minute fee for the time that your users are connected to our infrastructure. In any case, newly created primary API keys come with a substantial allotment of free use to allow you to build, experiment, and test without up-front costs.
+To identify yourself against our API, you'll need to sign up through our [Developer Console](https://developer.temasys.com.sg) and get an API key. During our current beta phase, the usage of our platform is free, however once we are out of beta there is a tiny per-minute fee for the time that your users are connected to our infrastructure. In any case, newly created primary API keys come with a substantial allotment of free use to allow you to build, experiment, and test without up-front costs.
 
 ### Step 2: Include SkywayJS into your website
 
 Here you have the choice to use our "Complete" version with all dependencies or, if you want to do dependency management yourself with [Bower](http://bower.io/), [RequireJS](http://requirejs.org/) or other client-side package managers, the "Library" version. [Here is an overview of these files](https://temasys.atlassian.net/wiki/display/TPD/Introducing+SkywayJS#IntroducingSkywayJS-Versionsupportandreleases).
 
-In our simple example above, we just include the complete version in a script tag in the header.
+In our simple codepen example above, we just include the complete version in a script tag in the header.
 
 ### Step 3: Instantiate Skyway and subscribe events
 
-In the codepen example above you see the basic events you'll need if you want to create a simple audio/video conference.
+In the codepen example you see the basic events you'll need if you want to create a simple audio/video conference.
 
 - **peerJoined:** informs you that another peer has joined the room and shares their peerID with you. In the example we create a new video element for this peer and use the peerId to identify this element in the DOM of our website.
 - **peerLeft:** informs you that a peer has left the room. In our example, we look in the DOM for the video element with the events peerId and remove it.
