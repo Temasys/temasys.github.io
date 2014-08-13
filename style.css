@@ -37,6 +37,8 @@ body {
     color: #333;
     text-shadow: -1px -1px 0 #eee;
     text-decoration: none;
+    z-index: 92;
+    position: relative;
 }
 
 a {
@@ -148,6 +150,7 @@ a:hover {
     margin: 0 auto;
     top: -63px;
     right: 0;
+    z-index: 90;
 }
 
 #app > nav > ul > li {
@@ -222,8 +225,8 @@ nav.submenu a {
     position: absolute;
     left: 50%;
     top: 75%;
-    width: 220px;
-    margin: 0 -110px;
+    width: 240px;
+    margin: 0 -120px;
     background: #00AAA4;
     color: #fff;
     padding: 10px 25px;
