@@ -117,7 +117,7 @@ Create a new Skyway object and subscribe events using the *on()* function. Here 
 
 <pre><code class="javascript">skyway.init({
   apiKey: 'Your API key',
-  defaultRoom: 'Your room name'
+  defaultRoom: 'Pick a room name'
 });
 </code></pre>
 By calling *init()* SkywayJS starts establishing a signaling connection with our servers and requires your API key as a parameter. This connection introduces new peers and sends control messages as required for the connection and handshake process between peers. You can also pass a *defaultRoom* parameter.
