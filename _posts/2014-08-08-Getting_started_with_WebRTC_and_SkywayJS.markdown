@@ -41,7 +41,7 @@ You identify yourself to the Skyway Infrastructure with your unique "API key" th
 
 Only Google Chrome and Mozilla Firefox support the technology natively in their current versions. We thought that wasn't good enough and therefor created plugins for Mac and Windows to upgrade Safari and Internet Explorer to support the current WebRTC standard as well. [They're available for free download here.](https://www.google.com.sg/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=0CBsQFjAA&url=https%3A%2F%2Ftemasys.atlassian.net%2Fwiki%2Fdisplay%2FTWPP%2FWebRTC%2BPlugins&ei=S3LsU6HHHtbj8AXCtYLoCg&usg=AFQjCNGXt5FJ1mNT2bS91Sq00ReyUoXUKQ&sig2=rmls5vwC3S2rM5SzlkcaDQ&bvm=bv.73231344,d.dGc)
 
-It's still early days for WebRTC, but assuming a modern multi-core processor and broadband internet connection you can reasonably expect to achieve 8-10 peers in an audio/video conference on a modern laptop or desktop PC.
+It's still early days for WebRTC, but assuming a modern multi-core processor and broadband internet connection you can reasonably expect to achieve 8-10 peers in an audio/video conference.
 
 Chrome for Android supports WebRTC as well, but however due to the less powerful CPUs found in the many mobile devices an expectation of three peers is more likely with more possible on latest devices with hardware VP8 acceleration. Users on iOS and other mobile OS will still have to wait a bit longer for support.
 
