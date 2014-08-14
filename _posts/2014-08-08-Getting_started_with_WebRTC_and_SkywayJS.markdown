@@ -79,11 +79,10 @@ In our simple example above, we just include the complete version in a script ta
 
 ### Step 3: Instantiate Skyway and subscribe events
 
-In the codepen example you see the basic events you'll need if you want to create a simple audio/video conference.
-
 <pre><code class="javascript">var skyway = new Skyway();
 </code></pre>
-At first: Create a new Skyway object.
+Create a new Skyway object and subscribe events using the *on()* function. Here are the most basic ones you'll need for a simple audio/video conference.
+
 <pre><code class="javascript">skyway.on('peerJoined', function(peerId, peerInfo, isSelf) {
   if(isSelf) return; // We already have a video element for our video and don't need to create a new one.
   var vid = document.createElement('video');
