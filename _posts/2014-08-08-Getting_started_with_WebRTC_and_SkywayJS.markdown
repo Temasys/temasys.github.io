@@ -10,7 +10,7 @@ excerpt: Building a simple audio/video conferencing website that doesn't need an
 
 You may have heard of WebRTC and its magical abilities recently and, like many, you might have found yourself struggling with trying to get even a simple demo going. The team here at Temasys built SkywayJS to address this and make it easy to build reliable peer connectivity solutions on any website with the help of WebRTC.
 
-Here is an example codepen that we've created that shows how you can create a very simple audio/video conference with merely 32 lines of JavaScript client-side code, with no additional server-code required.
+Here is an example codepen that we've created that shows how you can create a very simple audio/video conference with merely 35 lines of JavaScript client-side code, with no additional server-code required.
 
 <p data-height="360" data-theme-id="7751" data-slug-hash="nKvBu" data-default-tab="result" class='codepen'>See the Pen <a href='http://codepen.io/serrynaimo/pen/nKvBu/'>WebRTC with SkywayJS</a> by Thomas Gorissen (<a href='http://codepen.io/serrynaimo'>@serrynaimo</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
 <script async src="//codepen.io/assets/embed/ei.js"></script>
