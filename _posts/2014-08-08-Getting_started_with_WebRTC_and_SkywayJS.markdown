@@ -132,7 +132,7 @@ By calling *init()* SkywayJS starts establishing a signaling connection with our
 
 ### Step 5: Profit
 
-You've created a simple video conference. Easy, right? You can find an overview of all the methods and events Skyway offers (like *lockRoom*, *disableAudio* or *disableVideo*, etc...) in our API doc. Find the right doc for the version of Skyway you're using [in our version history](https://temasys.atlassian.net/wiki/display/TPD/Introducing+SkywayJS#IntroducingSkywayJS-Versionsupportandreleases).
+You've created a simple video conference. Easy, right? You can find an overview of all the methods and events Skyway offers (like *lockRoom*, *disableAudio* or *disableVideo*, etc...) in our [API doc](http://cdn.temasys.com.sg/skyway/skywayjs/latest/doc/classes/Skyway.html).
 
 Have fun, share this and let us know if you run into any [issues](http://github.com/Temasys/SkywayJS/issues)!
 
@@ -141,7 +141,7 @@ Have fun, share this and let us know if you run into any [issues](http://github.
 ## Resources
 
 - [Temasys Developer Console](https://developer.temasys.com.sg) - Get your API key
-- [SkywayJS Documentation](https://temasys.atlassian.net/wiki/display/TPD/Introducing+SkywayJS)
+- [Skyway API Documentation](http://cdn.temasys.com.sg/skyway/skywayjs/latest/doc/classes/Skyway.html)
 - [SkywayJS version history](https://temasys.atlassian.net/wiki/display/TPD/Introducing+SkywayJS#IntroducingSkywayJS-Versionsupportandreleases)
 - [SkywayJS source-code on Github](http://github.com/Temasys/SkywayJS)
 - [How to get support or contribute](http://temasys.github.io/support)
