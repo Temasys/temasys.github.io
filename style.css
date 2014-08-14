@@ -6,11 +6,14 @@ body {
 }
 
 #app > header {
+    position: fixed;
+    top: 0;
     width: 100%;
     background: #eee;
     border-bottom: 1px solid #bbb;
     box-shadow: 1px 1px 3px rgba(0,0,0,.2);
     height: 63px;
+    z-index: 48;
 }
 
 #app > header > div {
@@ -117,6 +120,7 @@ a:hover {
 #app > main {
 	width: 780px;
 	margin: 0 auto;
+    padding-top: 63px;
 	display: block;
 }
 
@@ -125,19 +129,17 @@ a:hover {
 }
 
 #app > nav {
-    margin: 0 auto;
-    width: 780px;
-    position: relative;
-    height: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 50;
 }
 
 #app > nav > ul {
-	position: absolute;
+	position: relative;
     width: 780px;
     margin: 0 auto;
-    top: -63px;
-    right: 0;
-    z-index: 90;
+    top: 0px;
 }
 
 #app > nav > ul > li {
