@@ -93,14 +93,14 @@ Create a new Skyway object and subscribe events using the *on()* function. Here 
 });
 </code></pre>
 **peerJoined:** informs you that a peer has joined the room and shares their *peerID* and *peerInfo* a with you. In the example we create a new video element for this peer and use the peerId to identify this element in the DOM of our website.
-<pre><code class="javascript">skyway.on('addPeerStream', function(peerId, stream, isSelf) {
+<pre><code class="javascript">skyway.on('incomingStream', function(peerId, stream, isSelf) {
   if(isSelf) return;
   var vid = document.getElementById(peerId);
   attachMediaStream(vid, stream);
 });
 </code></pre>
-**addPeerStream:** This event is fired after **peerJoined** when SkywayJS starts receiving the audio and video streams from that peer. This peer could be yourself in which case the event is fired when the user grants access to his microphone and/or camera and has joined a room successfully. In the example we use the *attachMediaStream()* function of our enhanced [AdapterJS](http://github.com/Temasys/AdapterJS) library to feed this stream into our previously created video tag. Why do we use this function? The different browser vendors have slightly different ways to do this and *attachMediaStream()* enables us to abstract this.
-<pre><code class="javascript">skyway.on('peerLeft', function(peerId) {
+**incomingStream:** This event is fired after **peerJoined** when SkywayJS starts receiving the audio and video streams from that peer. This peer could be yourself in which case the event is fired when the user grants access to his microphone and/or camera and has joined a room successfully. In the example we use the *attachMediaStream()* function of our enhanced [AdapterJS](http://github.com/Temasys/AdapterJS) library to feed this stream into our previously created video tag. Why do we use this function? The different browser vendors have slightly different ways to do this and *attachMediaStream()* enables us to abstract this.
+<pre><code class="javascript">skyway.on('peerLeft', function(peerId, peerInfo, isSelf) {
   var vid = document.getElementById(peerId);
   document.body.removeChild(vid);
 });
