@@ -251,7 +251,7 @@ nav.submenu a {
 }
 
 #projects li:last-child {
-    margin-right: 0;
+    margin-right: -2px;
 }
 
 .project h2 {
