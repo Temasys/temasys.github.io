@@ -56,7 +56,8 @@ h1 {
 
 h2 {
     color: #222;
-    font-size: 2em;
+    font-size: 2.5em;
+    line-height: 1em;
     font-weight: 200;
 }
 
@@ -71,20 +72,24 @@ hr {
 
 pre {
     margin-top: 0;
-    background: #ddd;
-    border-radius: 2px;
-    padding: 1px;
+    background: #f8f8f8;
+    border-radius: 4px;
+    padding: 4px;
+    line-height: 1.2em;
 }
 
 em {
     font-family: 'Courier New', serif;
     font-size: .9em;
-    border: 1px solid #ddd;
-    border-radius: 2px;
+    border-radius: 4px;
     background: #f8f8f8;
-    padding: 1px 3px;
+    padding: 2px 4px;
     font-style: normal;
     vertical-align: middle;
+}
+
+strong {
+    font-weight: 400;
 }
 
 ul > li {
@@ -237,7 +242,7 @@ nav.submenu a {
 #projects li {
     display: inline-block;
     list-style: none;
-    padding: 7px 25px;
+    padding: 0 25px;
     background: #eee;
     border: 1px solid #bbb;
     box-shadow: 1px 1px 3px rgba(0,0,0,.2);
@@ -266,7 +271,7 @@ nav.submenu a {
 }
 
 .project .desc {
-    height: 2.3em;
+    height: 2em;
 }
 
 footer {
@@ -285,8 +290,11 @@ article h2 > a:active {
     text-decoration: none;
 }
 
-article .entry {
+.entry {
 	padding: 10px 0;
+    font-weight: 300;
+    font-size: 1.1em;
+    line-height: 1.5em;
 }
 
 article .entry img {
@@ -302,8 +310,8 @@ article header span {
     font-weight: 300;
 }
 
-article header h2 {
-    margin-bottom: 3px;
+article header h2, .post h2 {
+    margin-bottom: 8px;
 }
 
 section address {
