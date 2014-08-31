@@ -204,8 +204,9 @@ nav.submenu a {
 #home h1 {
     position: absolute;
     width: 100%;
-    top: 25%;
+    top: 23%;
     text-align: center;
+    font-size: 3.3em;
 }
 
 #home p {
