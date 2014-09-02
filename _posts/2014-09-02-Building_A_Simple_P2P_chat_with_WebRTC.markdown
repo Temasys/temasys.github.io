@@ -95,11 +95,11 @@ function addMessage(message, className) {
   var chatbox = document.getElementById('chatbox'),
     div = document.createElement('div');
   div.className = className;
-  div.innerText = message;
+  div.textContent = message;
   chatbox.appendChild(div);
 }
 {% endhighlight %}
-This is my helper function to add a new message to the **chatbox** div that I created earlier. I can also pass a *className* variable to leverage CSS, so I can make different messages stand out. I use the *innerText* property of the div element to avoid that somebody can send me script tags or HTML inside a message that gets executed.
+This is my helper function to add a new message to the **chatbox** div that I created earlier. I can also pass a *className* variable to leverage CSS, so I can make different messages stand out. I use the *textContent* property of the div element to avoid that somebody can send me script tags or HTML inside a message that gets executed.
 
 
 ### Step 3: Subscribing the Skyway events
