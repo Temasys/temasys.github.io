@@ -4,7 +4,7 @@ title: Building A Simple Peer-to-Peer WebRTC Chat
 category: How-To
 author: Thomas Gorissen
 
-excerpt: Audio/Video is not the only thing that WebRTC enables you to do. The data channel offers a variety of use-cases, too, to send information from one peer to another without going through a server. In this tutorial I show you how to build a simple chat.
+excerpt: Audio/Video is not the only thing that WebRTC enables you to do. The data channel offers a variety of use-cases, too, by sending information from one peer to another without going through a server. In this tutorial I show you how to build a simple chat.
 
 ---
 
