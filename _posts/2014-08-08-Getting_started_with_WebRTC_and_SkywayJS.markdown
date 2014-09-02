@@ -95,7 +95,7 @@ skyway.on('peerJoined', function(peerId, peerInfo, isSelf) {
   document.body.appendChild(vid);
 });
 {% endhighlight %}
-**[peerJoined](http://cdn.temasys.com.sg/skyway/skywayjs/0.4.2/doc/classes/Skyway.html#event_peerJoined):** informs you that a peer has joined the room and shares their *peerID* and *peerInfo* a with you. In the example we create a new video element for this peer and use the peerId to identify this element in the DOM of our website.
+**[peerJoined](http://cdn.temasys.com.sg/skyway/skywayjs/latest/doc/classes/Skyway.html#event_peerJoined):** informs you that a peer has joined the room and shares their *peerID* and *peerInfo* a with you. In the example we create a new video element for this peer and use the peerId to identify this element in the DOM of our website.
 {% highlight javascript %}
 skyway.on('incomingStream', function(peerId, stream, isSelf) {
   if(isSelf) return;
@@ -103,21 +103,21 @@ skyway.on('incomingStream', function(peerId, stream, isSelf) {
   attachMediaStream(vid, stream);
 });
 {% endhighlight %}
-**[incomingStream](http://cdn.temasys.com.sg/skyway/skywayjs/0.4.2/doc/classes/Skyway.html#event_incomingStream):** This event is fired after **peerJoined** when SkywayJS starts receiving the audio and video streams from that peer. This peer could be yourself in which case the event is fired when the user grants access to his microphone and/or camera and has joined a room successfully. In the example we use the *attachMediaStream()* function of our enhanced [AdapterJS](http://github.com/Temasys/AdapterJS) library to feed this stream into our previously created video tag. Why do we use this function? The different browser vendors have slightly different ways to do this and *attachMediaStream()* enables us to abstract this.
+**[incomingStream](http://cdn.temasys.com.sg/skyway/skywayjs/latest/doc/classes/Skyway.html#event_incomingStream):** This event is fired after **peerJoined** when SkywayJS starts receiving the audio and video streams from that peer. This peer could be yourself in which case the event is fired when the user grants access to his microphone and/or camera and has joined a room successfully. In the example we use the *attachMediaStream()* function of our enhanced [AdapterJS](http://github.com/Temasys/AdapterJS) library to feed this stream into our previously created video tag. Why do we use this function? The different browser vendors have slightly different ways to do this and *attachMediaStream()* enables us to abstract this.
 {% highlight javascript %}
 skyway.on('peerLeft', function(peerId, peerInfo, isSelf) {
   var vid = document.getElementById(peerId);
   document.body.removeChild(vid);
 });
 {% endhighlight %}
-**[peerLeft](http://cdn.temasys.com.sg/skyway/skywayjs/0.4.2/doc/classes/Skyway.html#method_peerLeft):** informs you that a peer has left the room. In our example, we look in the DOM for the video element with the events peerId and remove it.
+**[peerLeft](http://cdn.temasys.com.sg/skyway/skywayjs/latest/doc/classes/Skyway.html#method_peerLeft):** informs you that a peer has left the room. In our example, we look in the DOM for the video element with the events peerId and remove it.
 {% highlight javascript %}
 skyway.on('mediaAccessSuccess', function(stream) {
   var vid = document.getElementById('myvideo');
   attachMediaStream(vid, stream);
 });
 {% endhighlight %}
-**[mediaAccessSuccess](http://cdn.temasys.com.sg/skyway/skywayjs/0.4.2/doc/classes/Skyway.html#event_mediaAccessSuccess):** The user needs to authorize his browser to allow your website access to their camera, microphone or both. Once the user clicks "Allow" in his browser, this event fires and give us access to the audio/video stream. As you'd guess **mediaAccessError** will be triggered if the user declines.
+**[mediaAccessSuccess](http://cdn.temasys.com.sg/skyway/skywayjs/latest/doc/classes/Skyway.html#event_mediaAccessSuccess):** The user needs to authorize his browser to allow your website access to their camera, microphone or both. Once the user clicks "Allow" in his browser, this event fires and give us access to the audio/video stream. As you'd guess **mediaAccessError** will be triggered if the user declines.
 
 
 ### Step 4: Initialize and joinRoom
@@ -128,7 +128,7 @@ skyway.init({
   defaultRoom: 'Pick a room name'
 });
 {% endhighlight %}
-By calling *[init](http://cdn.temasys.com.sg/skyway/skywayjs/0.4.2/doc/classes/Skyway.html#method_init)* SkywayJS starts establishing a signaling connection with our servers and requires your API key as a parameter. This connection introduces new peers and sends control messages as required for the connection and handshake process between peers. You can also pass a *defaultRoom* parameter.
+By calling *[init](http://cdn.temasys.com.sg/skyway/skywayjs/latest/doc/classes/Skyway.html#method_init)* SkywayJS starts establishing a signaling connection with our servers and requires your API key as a parameter. This connection introduces new peers and sends control messages as required for the connection and handshake process between peers. You can also pass a *defaultRoom* parameter.
 
 {% highlight javascript %}
 skyway.joinRoom({
@@ -136,7 +136,7 @@ skyway.joinRoom({
     video: true
 });
 {% endhighlight %}
-*[joinRoom](http://cdn.temasys.com.sg/skyway/skywayjs/0.4.2/doc/classes/Skyway.html#method_joinRoom)* then tells our servers that you now want to inform the other peers in the room, that you're joining and you are able to specify the features that you want to have enabled. In this case we establish both audio and video streams. You don't need to pass anything if you just want to send chat messages or data streams.
+*[joinRoom](http://cdn.temasys.com.sg/skyway/skywayjs/latest/doc/classes/Skyway.html#method_joinRoom)* then tells our servers that you now want to inform the other peers in the room, that you're joining and you are able to specify the features that you want to have enabled. In this case we establish both audio and video streams. You don't need to pass anything if you just want to send chat messages or data streams.
 
 
 ### Step 5: Profit

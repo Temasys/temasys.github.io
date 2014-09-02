@@ -15,7 +15,7 @@ Audio/Video communication is not the only thing that WebRTC enables you to do. T
 
 I'm using our open-source [SkywayJS](https://github.com/Temasys/SkywayJS) library to build this. It takes care of the hard parts of introducing peers in different network environments and makes WebRTC really easy to use. If you haven't seen my Getting Started tutorial, [you can find it here](http://temasys.github.io/how-to/2014/08/08/Getting_started_with_WebRTC_and_SkywayJS/).
 
-**Tip:** You can click on the function and event names in this tutorial to see the corresponding entry in our [API documentation](http://cdn.temasys.com.sg/skyway/skywayjs/0.4.2/doc/classes/Skyway.html).
+**Tip:** You can click on the function and event names in this tutorial to see the corresponding entry in our [API documentation](http://cdn.temasys.com.sg/skyway/skywayjs/latest/doc/classes/Skyway.html).
 
 
 ### Step 1: Include SkywayJS into your website
@@ -65,21 +65,21 @@ function setName() {
   });
 }
 {% endhighlight %}
-In the *setName* function, we simply read out the string value that the user has written into our **name** input field and use Skyway *[setUserData](http://cdn.temasys.com.sg/skyway/skywayjs/0.4.2/doc/classes/Skyway.html#method_setUserData)()* function to pass any kind of user information in form of a JavaScript object into Skyway. This can be done before or after you join a room context and will automatically become available to every peer joining the same room context.
+In the *setName* function, we simply read out the string value that the user has written into our **name** input field and use Skyway *[setUserData](http://cdn.temasys.com.sg/skyway/skywayjs/latest/doc/classes/Skyway.html#method_setUserData)()* function to pass any kind of user information in form of a JavaScript object into Skyway. This can be done before or after you join a room context and will automatically become available to every peer joining the same room context.
 
 {% highlight javascript %}
 function joinRoom() {
   skyway.joinRoom();
 }
 {% endhighlight %}
-Here I just call *[joinRoom](http://cdn.temasys.com.sg/skyway/skywayjs/0.4.2/doc/classes/Skyway.html#method_joinRoom)()* on Skyway. This tells the Skyway signaling server that I'm now ready to be connected to other peers joining the default room context.
+Here I just call *[joinRoom](http://cdn.temasys.com.sg/skyway/skywayjs/latest/doc/classes/Skyway.html#method_joinRoom)()* on Skyway. This tells the Skyway signaling server that I'm now ready to be connected to other peers joining the default room context.
 
 {% highlight javascript %}
 function leaveRoom() {
   skyway.leaveRoom();
 }
 {% endhighlight %}
-*[leaveRoom](http://cdn.temasys.com.sg/skyway/skywayjs/0.4.2/doc/classes/Skyway.html#method_leaveRoom)()* leaves little surprise here.
+*[leaveRoom](http://cdn.temasys.com.sg/skyway/skywayjs/latest/doc/classes/Skyway.html#method_leaveRoom)()* leaves little surprise here.
 
 {% highlight javascript %}
 function sendMessage() {
@@ -88,7 +88,7 @@ function sendMessage() {
   input.value = '';
 }
 {% endhighlight %}
-This is really where the magic happens. I use the *[sendP2PMessage](http://cdn.temasys.com.sg/skyway/skywayjs/0.4.2/doc/classes/Skyway.html#method_sendP2PMessage)()* function to directly send my string message from the **message** input field to all connected peers in my room. This happens one-by-one in a peer-to-peer fashion and through an encrypted transmission. No data touches a server. It's a great way to have super private conversations. (Be aware: This is pretty safe to use for private data exchange, but nothing is ever totally safe!)
+This is really where the magic happens. I use the *[sendP2PMessage](http://cdn.temasys.com.sg/skyway/skywayjs/latest/doc/classes/Skyway.html#method_sendP2PMessage)()* function to directly send my string message from the **message** input field to all connected peers in my room. This happens one-by-one in a peer-to-peer fashion and through an encrypted transmission. No data touches a server. It's a great way to have super private conversations. (Be aware: This is pretty safe to use for private data exchange, but nothing is ever totally safe!)
 
 {% highlight javascript %}
 function addMessage(message, className) {
@@ -115,7 +115,7 @@ skyway.on('peerJoined', function(peerId, peerInfo, isSelf) {
   addMessage(user + ' joined the room', 'action');
 });
 {% endhighlight %}
-**[peerJoined](http://cdn.temasys.com.sg/skyway/skywayjs/0.4.2/doc/classes/Skyway.html#event_peerJoined):** When somebody joins the chat room, I want to be informed and show a little action message. I use the *isSelf* parameter to determine if it's myself joining the room or somebody else and in the latter case I use Skyways *peerInfo* attribute to retrieve the userData object that the user might have set earlier using Skyways **[setUserData](http://cdn.temasys.com.sg/skyway/skywayjs/0.4.2/doc/classes/Skyway.html#method_setUserData)** function. If there is no name set yet, I fall back and use Skyways *peerId*.
+**[peerJoined](http://cdn.temasys.com.sg/skyway/skywayjs/latest/doc/classes/Skyway.html#event_peerJoined):** When somebody joins the chat room, I want to be informed and show a little action message. I use the *isSelf* parameter to determine if it's myself joining the room or somebody else and in the latter case I use Skyways *peerInfo* attribute to retrieve the userData object that the user might have set earlier using Skyways **[setUserData](http://cdn.temasys.com.sg/skyway/skywayjs/latest/doc/classes/Skyway.html#method_setUserData)** function. If there is no name set yet, I fall back and use Skyways *peerId*.
 
 {% highlight javascript %}
 skyway.on('peerUpdated', function(peerId, peerInfo, isSelf) {
@@ -125,7 +125,7 @@ skyway.on('peerUpdated', function(peerId, peerInfo, isSelf) {
   }
 });
 {% endhighlight %}
-**[peerUpdated](http://cdn.temasys.com.sg/skyway/skywayjs/0.4.2/doc/classes/Skyway.html#event_peerUpdated):** It may happen that a peer updates its userData object while connected to the room. In this case the **peerUpdated** event is fired. I receive the new userData object the same way I got it in the **peerJoined** event earlier.
+**[peerUpdated](http://cdn.temasys.com.sg/skyway/skywayjs/latest/doc/classes/Skyway.html#event_peerUpdated):** It may happen that a peer updates its userData object while connected to the room. In this case the **peerUpdated** event is fired. I receive the new userData object the same way I got it in the **peerJoined** event earlier.
 
 {% highlight javascript %}
 skyway.on('peerLeft', function(peerId, peerInfo, isSelf) {
@@ -136,7 +136,7 @@ skyway.on('peerLeft', function(peerId, peerInfo, isSelf) {
   addMessage(user + ' left the room', 'action');
 });
 {% endhighlight %}
-**[peerLeft](http://cdn.temasys.com.sg/skyway/skywayjs/0.4.2/doc/classes/Skyway.html#event_peerLeft):** When a peer leaves the chatroom, I also write a short message into the chat room to inform the user.
+**[peerLeft](http://cdn.temasys.com.sg/skyway/skywayjs/latest/doc/classes/Skyway.html#event_peerLeft):** When a peer leaves the chatroom, I also write a short message into the chat room to inform the user.
 
 {% highlight javascript %}
 skyway.on('incomingMessage', function(message, peerId, peerInfo, isSelf) {
@@ -149,7 +149,7 @@ skyway.on('incomingMessage', function(message, peerId, peerInfo, isSelf) {
   addMessage(user + ': ' + message.content, className);
 });
 {% endhighlight %}
-**[incomingMessage](http://cdn.temasys.com.sg/skyway/skywayjs/0.4.2/doc/classes/Skyway.html#event_incomingMessage):** This event is triggered whenever Skyway receives a public or private message from another peer. Messages sent with *sendP2PMessage()* are always private messages, although they could have been sent to multiple peers. If you want to find out if a message was a non-peer-to-peer public broadcast, you can check *peerInfo.isPrivate* to be false.
+**[incomingMessage](http://cdn.temasys.com.sg/skyway/skywayjs/latest/doc/classes/Skyway.html#event_incomingMessage):** This event is triggered whenever Skyway receives a public or private message from another peer. Messages sent with *sendP2PMessage()* are always private messages, although they could have been sent to multiple peers. If you want to find out if a message was a non-peer-to-peer public broadcast, you can check *peerInfo.isPrivate* to be false.
 
 
 ### Step 4: Initialize!
@@ -157,7 +157,7 @@ skyway.on('incomingMessage', function(message, peerId, peerInfo, isSelf) {
 {% highlight javascript %}
 skyway.init('Your API key');
 {% endhighlight %}
-By calling *[init](http://cdn.temasys.com.sg/skyway/skywayjs/0.4.2/doc/classes/Skyway.html#method_init)()* SkywayJS starts establishing a signaling connection with our servers and requires your API key as a parameter. Only after calling this function, you're able to join room contexts.
+By calling *[init](http://cdn.temasys.com.sg/skyway/skywayjs/latest/doc/classes/Skyway.html#method_init)()* SkywayJS starts establishing a signaling connection with our servers and requires your API key as a parameter. Only after calling this function, you're able to join room contexts.
 
 If you don't have one yet, you can register and get your own API key using our [Developer Console]([Temasys Developer Console](https://developer.temasys.com.sg). I'm aware you can make a lot fancier of a chat than this, but I think this example shows pretty well that creating a chat is not as hard anymore as it used to be. :) Leave us your feedback in our [developer chat](http://livesupport.temasys.com.sg/)! I'd love to hear from you.
 
