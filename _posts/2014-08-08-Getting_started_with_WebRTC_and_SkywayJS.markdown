@@ -12,7 +12,7 @@ You may have heard of WebRTC and its magical abilities recently and, like many, 
 
 Here is an example codepen that we've created that shows how you can create a very simple audio/video conference with merely 35 lines of JavaScript client-side code, with no additional server-code required.
 
-<p data-height="360" data-theme-id="7751" data-slug-hash="nKvBu" data-default-tab="result" class='codepen'>See the Pen <a href='http://codepen.io/serrynaimo/pen/nKvBu/'>WebRTC with SkywayJS</a> by Thomas Gorissen (<a href='http://codepen.io/serrynaimo'>@serrynaimo</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<p data-height="370" data-theme-id="7751" data-slug-hash="nKvBu" data-default-tab="result" class='codepen'>See the Pen <a href='http://codepen.io/serrynaimo/pen/nKvBu/'>WebRTC with SkywayJS</a> by Thomas Gorissen (<a href='http://codepen.io/serrynaimo'>@serrynaimo</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
 <script async src="//codepen.io/assets/embed/ei.js"></script>
 
 To further demonstrate the possibilities and flexibility of SkywayJS, I've also created a more elaborate demo created with the help of [Facebooks React](http://facebook.github.io/react/) at [http://getaroom.io](http://getaroom.io). Check it out, share it, and and use it if you like it.
@@ -58,32 +58,35 @@ To identify yourself against our API, you'll need to sign up through our [Develo
 
 ### Step 2: Include SkywayJS into your website
 
-<pre><code class="html">&lt;html&gt;
-&lt;head&gt;
-    &lt;title>WebRTC with SkywayJS&lt;/title&gt;
+{% highlight html %}
+<html>
+<head>
+    <title>WebRTC with SkywayJS</title>
 
-    &lt;script src="//cdn.temasys.com.sg/skyway/skywayjs/0.4.x/skyway.complete.min.js"&gt;&lt;/script&gt;
-&lt;/head&gt;
-&lt;body&gt;
+    <script src="//cdn.temasys.com.sg/skyway/skywayjs/0.4.x/skyway.complete.min.js"></script>
+</head>
+<body>
 
-  &lt;video id="myvideo" style="transform: rotateY(-180deg);" autoplay muted>&lt;/video&gt;
+  <video id="myvideo" style="transform: rotateY(-180deg);" autoplay muted></video>
 
-&lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
+</body>
+</html>
+{% endhighlight %}
 
-Here you have the choice to use our "Complete" version with all dependencies or, if you want to do dependency management yourself with e.g. [RequireJS](http://requirejs.org/) or other client-side package managers, the "Library" version. [Here is an overview of these files](https://temasys.atlassian.net/wiki/display/TPD/Introducing+SkywayJS#IntroducingSkywayJS-Versionsupportandreleases).
+Here you have the choice to use our "Complete" version with all dependencies or, if you want to do dependency management yourself with e.g. [RequireJS](http://requirejs.org/) or other client-side package managers, the "Library" version. [Here is an overview of these files](https://github.com/Temasys/SkywayJS/releases).
 
 In our simple example above, we just include the complete version in a script tag in the header. The body itself only contains a video tag to show your own camera picture later. We used a CSS transform to mirror the image so it feels more natural and muted the audio, so you don't hear yourself speaking. The *autoplay* attribute is needed in some browsers where you'd otherwise only see a picture of yourself.
 
 
 ### Step 3: Instantiate Skyway and subscribe events
 
-<pre><code class="javascript">var skyway = new Skyway();
-</code></pre>
+{% highlight javascript %}
+var skyway = new Skyway();
+{% endhighlight %}
 Create a new Skyway object and subscribe events using the *on()* function. Here are the most basic ones you'll need for a simple audio/video conference.
 
-<pre><code class="javascript">skyway.on('peerJoined', function(peerId, peerInfo, isSelf) {
+{% highlight javascript %}
+skyway.on('peerJoined', function(peerId, peerInfo, isSelf) {
   if(isSelf) return; // We already have a video element for our video and don't need to create a new one.
   var vid = document.createElement('video');
   vid.autoplay = true;
@@ -91,43 +94,48 @@ Create a new Skyway object and subscribe events using the *on()* function. Here 
   vid.id = peerId;
   document.body.appendChild(vid);
 });
-</code></pre>
+{% endhighlight %}
 **peerJoined:** informs you that a peer has joined the room and shares their *peerID* and *peerInfo* a with you. In the example we create a new video element for this peer and use the peerId to identify this element in the DOM of our website.
-<pre><code class="javascript">skyway.on('incomingStream', function(peerId, stream, isSelf) {
+{% highlight javascript %}
+skyway.on('incomingStream', function(peerId, stream, isSelf) {
   if(isSelf) return;
   var vid = document.getElementById(peerId);
   attachMediaStream(vid, stream);
 });
-</code></pre>
+{% endhighlight %}
 **incomingStream:** This event is fired after **peerJoined** when SkywayJS starts receiving the audio and video streams from that peer. This peer could be yourself in which case the event is fired when the user grants access to his microphone and/or camera and has joined a room successfully. In the example we use the *attachMediaStream()* function of our enhanced [AdapterJS](http://github.com/Temasys/AdapterJS) library to feed this stream into our previously created video tag. Why do we use this function? The different browser vendors have slightly different ways to do this and *attachMediaStream()* enables us to abstract this.
-<pre><code class="javascript">skyway.on('peerLeft', function(peerId, peerInfo, isSelf) {
+{% highlight javascript %}
+skyway.on('peerLeft', function(peerId, peerInfo, isSelf) {
   var vid = document.getElementById(peerId);
   document.body.removeChild(vid);
 });
-</code></pre>
+{% endhighlight %}
 **peerLeft:** informs you that a peer has left the room. In our example, we look in the DOM for the video element with the events peerId and remove it.
-<pre><code class="javascript">skyway.on('mediaAccessSuccess', function(stream) {
+{% highlight javascript %}
+skyway.on('mediaAccessSuccess', function(stream) {
   var vid = document.getElementById('myvideo');
   attachMediaStream(vid, stream);
 });
-</code></pre>
+{% endhighlight %}
 **mediaAccessSuccess:** The user needs to authorize his browser to allow your website access to their camera, microphone or both. Once the user clicks "Allow" in his browser, this event fires and give us access to the audio/video stream. As you'd guess **mediaAccessError** will be triggered if the user declines.
 
 
 ### Step 4: Initialize and joinRoom
 
-<pre><code class="javascript">skyway.init({
+{% highlight javascript %}
+skyway.init({
   apiKey: 'Your API key',
   defaultRoom: 'Pick a room name'
 });
-</code></pre>
+{% endhighlight %}
 By calling *init()* SkywayJS starts establishing a signaling connection with our servers and requires your API key as a parameter. This connection introduces new peers and sends control messages as required for the connection and handshake process between peers. You can also pass a *defaultRoom* parameter.
 
-<pre><code class="javascript">skyway.joinRoom({
+{% highlight javascript %}
+skyway.joinRoom({
     audio: true,
     video: true
 });
-</code></pre>
+{% endhighlight %}
 *joinRoom* then tells our servers that you now want to inform the other peers in the room, that you're joining and you are able to specify the features that you want to have enabled. In this case we establish both audio and video streams. You don't need to pass anything if you just want to send chat messages or data streams.
 
 
@@ -143,7 +151,7 @@ Have fun, share this and let us know if you run into any [issues](http://github.
 
 - [Temasys Developer Console](https://developer.temasys.com.sg) - Get your API key
 - [Skyway API Documentation](http://cdn.temasys.com.sg/skyway/skywayjs/latest/doc/classes/Skyway.html)
-- [SkywayJS version history](https://temasys.atlassian.net/wiki/display/TPD/Introducing+SkywayJS#IntroducingSkywayJS-Versionsupportandreleases)
+- [SkywayJS version history](https://github.com/Temasys/SkywayJS/releases)
 - [SkywayJS source-code on Github](http://github.com/Temasys/SkywayJS)
 - [How to get support or contribute](http://temasys.github.io/support)
 - [Getaroom.io tech-demo built using React and SkywayJS](http://getaroom.io)
