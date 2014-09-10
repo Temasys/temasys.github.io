@@ -63,7 +63,7 @@ To identify yourself against our API, you'll need to sign up through our [Develo
 <head>
     <title>WebRTC with SkywayJS</title>
 
-    <script src="//cdn.temasys.com.sg/skyway/skywayjs/0.4.x/skyway.complete.min.js"></script>
+    <script src="//cdn.temasys.com.sg/skyway/skywayjs/0.5.x/skyway.complete.min.js"></script>
 </head>
 <body>
 

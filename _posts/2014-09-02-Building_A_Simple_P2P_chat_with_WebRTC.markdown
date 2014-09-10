@@ -25,7 +25,7 @@ I'm using our open-source [SkywayJS](https://github.com/Temasys/SkywayJS) librar
 <head>
     <title>WebRTC chat with SkywayJS</title>
 
-    <script src="//cdn.temasys.com.sg/skyway/skywayjs/0.4.x/skyway.complete.min.js"></script>
+    <script src="//cdn.temasys.com.sg/skyway/skywayjs/0.5.x/skyway.complete.min.js"></script>
 </head>
 <body>
 
