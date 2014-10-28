@@ -15,9 +15,9 @@ There is
 ## Resources
 
 - [Temasys Developer Console](https://developer.temasys.com.sg) - Get your API key
-- [Skyway API Documentation](http://cdn.temasys.com.sg/skyway/skywayjs/latest/doc/classes/Skyway.html)
-- [SkywayJS version history](https://github.com/Temasys/SkywayJS/releases)
-- [SkywayJS source-code on Github](http://github.com/Temasys/SkywayJS)
+- [Skylink API Documentation](http://cdn.temasys.com.sg/skyway/skywayjs/latest/doc/classes/Skylink.html)
+- [SkylinkJS version history](https://github.com/Temasys/SkylinkJS/releases)
+- [SkylinkJS source-code on Github](http://github.com/Temasys/SkylinkJS)
 - [How to get support or contribute](http://temasys.github.io/support)
 
 
