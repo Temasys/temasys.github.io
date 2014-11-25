@@ -238,6 +238,7 @@ nav.submenu a {
 #projects ul {
     padding: 0;
     margin: 0;
+    text-align: center;
 }
 
 #projects li {
@@ -250,14 +251,18 @@ nav.submenu a {
     text-align: center;
     cursor: pointer;
     box-sizing: border-box;
-    margin-right: 25px;
+    margin: 0 25px 25px 0;
     width: 375px;
     height: 200px;
     vertical-align: middle;
 }
 
-#projects li:last-child {
+#projects li:nth-child(2n) {
     margin-right: -2px;
+}
+
+#projects li:last-child {
+    margin: 0;
 }
 
 .project h2 {
