@@ -22,9 +22,9 @@ To further demonstrate the possibilities and flexibility of SkylinkJS, I've also
 
 ## How does this work?
 
-### Skylink: IaaS for multi-media peer connectivity
+### Skylink: BaaS for multi-media peer connectivity
 
-Temsys has created the super scalable Skylink infrastructure that helps to connect two or more peers very reliably and easily. It was designed specifically for [WebRTC](http://en.wikipedia.org/wiki/WebRTC), which enables your browser to send data directly to another browser. That data can be a chat message, a file or even an audio/video stream from your devices camera and microphone thus allowing you to create all kinds of cool real-time video conferencing, collaboration, tutoring and other live-presence use-cases.
+Temsys has created the super scalable Skylink backend-as-a-service that helps to connect two or more peers very reliably and easily. It was designed specifically for [WebRTC](http://en.wikipedia.org/wiki/WebRTC), which enables your browser to send data directly to another browser. That data can be a chat message, a file or even an audio/video stream from your devices camera and microphone thus allowing you to create all kinds of cool real-time video conferencing, collaboration, tutoring and other live-presence use-cases.
 
 ### The SkylinkJS library
 
