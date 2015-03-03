@@ -54,7 +54,7 @@ To see it in action, try it out yourself in with our tech-demo at [http://getaro
 
 ### Step 1: Get an API key
 
-To identify yourself against our API, you'll need to sign up through our [Developer Console](https://developer.temasys.com.sg) and get an API key. During our current beta phase, the usage of our platform is free, however once we are out of beta there is a tiny per-minute fee for the time that your users are connected to our infrastructure. In any case, newly created primary API keys come with a substantial allotment of free use to allow you to build, experiment, and test without up-front costs.
+To identify yourself against our API, you'll need to sign up through our [Developer Console](https://developer.temasys.com.sg) and get an API key. During our current beta phase, the usage of our platform is free, however once we are out of beta there is going to be a very affordable charge for our infrastructure services. In any case, newly created primary API keys come with a substantial allotment of free use to allow you to build, experiment, and test without up-front costs.
 
 ### Step 2: Include SkylinkJS into your website
 
