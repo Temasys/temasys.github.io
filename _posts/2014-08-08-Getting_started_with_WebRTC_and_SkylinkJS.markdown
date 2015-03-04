@@ -30,11 +30,11 @@ Temsys has created the super scalable Skylink backend-as-a-service that helps to
 
 WebRTC is still a rather low-level browser API and requires you to do significant work around solving signaling issues and resolving differences in implementation between web browsers. We at Temasys are part of the [WebRTC working group at the W3C](http://www.w3.org/2011/04/webrtc-charter.html) and create solutions with and around WebRTC for more than a year now. We know this part of the puzzle inside and out, and that is why we have created SkylinkJS. We want to solve the connectivity and implementation headaches for you and let you focus on building the cool stuff.
 
-### API keys, alias keys, realms, rooms and peers
+### App keys, alias keys, realms, rooms and peers
 
 <img src="/resources/img/realmsandrooms.png" style="float:left; margin-right: 20px;" />When you use SkylinkJS in your <em style="color: MediumVioletRed; background-color: #fff; border: 1px solid MediumVioletRed;">website</em> or <em style="color: MediumVioletRed; background-color: #fff; border: 1px solid MediumVioletRed;">app</em>, you can invite users (we call them <em style="color: goldenrod; background-color: #fff; border: 1px solid goldenrod;">peers</em>) to join a shared space in which they can exchange data privately with each other. We call this space a <em style="color: firebrick; background-color: #fff; border: 1px solid firebrick;">room</em>. Every peer that wants to join a room needs to know its unique identifier, like a secure, generated token or a simple name. We leave it up to you on how you come up with these room IDs and how you inform peers about them. One of our primary goals in SkylinkJS was to not interfere with your application logic or UX. We recommend generating [UUIDs](http://jsfiddle.net/briguy37/2MVFd/) as a best-practice here for making the identifiers difficult to guess, reasonably unique and providing an additional layer of privacy of your users during room sessions.
 
-You identify yourself to the Skylink Infrastructure with your unique <em style="color: mediumblue; background-color: #fff; border: 1px solid mediumblue;">API key</em> that you can create in our [Developer Console](https://developer.temasys.com.sg) or via our REST API. Every API key creates a new <em style="color: darkgreen; background-color: #fff; border: 1px solid darkgreen;">realm</em> in which your rooms can exist. Every API key will only work on your specified [CORS domain name](http://en.wikipedia.org/wiki/Cross-origin_resource_sharing). If you want to have a different website or app access the same realm and therefor the same rooms, you are also able to create <em style="color: mediumblue; background-color: #fff; border: 1px solid mediumblue;">alias keys</em> that extend the scope of the realm to other domains or simply isolate your apps various flavors for logging and reporting purposes.
+You identify yourself to the Skylink Infrastructure with your unique <em style="color: mediumblue; background-color: #fff; border: 1px solid mediumblue;">App key</em> that you can create in our [Developer Console](https://developer.temasys.com.sg) or via our REST API. Every App key creates a new <em style="color: darkgreen; background-color: #fff; border: 1px solid darkgreen;">realm</em> in which your rooms can exist. Every App key will only work on your specified [CORS domain name](http://en.wikipedia.org/wiki/Cross-origin_resource_sharing). If you want to have a different website or app access the same realm and therefor the same rooms, you are also able to create <em style="color: mediumblue; background-color: #fff; border: 1px solid mediumblue;">alias keys</em> that extend the scope of the realm to other domains or simply isolate your apps various flavors for logging and reporting purposes.
 
 
 ### Compatibility and Performance
@@ -52,9 +52,9 @@ To see it in action, try it out yourself in with our tech-demo at [http://getaro
 
 ## How do I get started building cool stuff with SkylinkJS myself?
 
-### Step 1: Get an API key
+### Step 1: Get an App key
 
-To identify yourself against our API, you'll need to sign up through our [Developer Console](https://developer.temasys.com.sg) and get an API key. During our current beta phase, the usage of our platform is free, however once we are out of beta there is going to be a very affordable charge for our infrastructure services. In any case, newly created primary API keys come with a substantial allotment of free use to allow you to build, experiment, and test without up-front costs.
+To identify yourself against our API, you'll need to sign up through our [Developer Console](https://developer.temasys.com.sg) and get an App key. During our current beta phase, the usage of our platform is free, however once we are out of beta there is going to be a very affordable charge for our infrastructure services. In any case, newly created primary App keys come with a substantial allotment of free use to allow you to build, experiment, and test without up-front costs.
 
 ### Step 2: Include SkylinkJS into your website
 
@@ -124,11 +124,11 @@ skylink.on('mediaAccessSuccess', function(stream) {
 
 {% highlight javascript %}
 skylink.init({
-  apiKey: 'Your API key',
+  apiKey: 'Your App key',
   defaultRoom: 'Pick a room name'
 });
 {% endhighlight %}
-By calling *[init](http://cdn.temasys.com.sg/skylink/skylinkjs/latest/doc/classes/Skylink.html#method_init)* SkylinkJS starts establishing a signaling connection with our servers and requires your API key as a parameter. This connection introduces new peers and sends control messages as required for the connection and handshake process between peers. You can also pass a *defaultRoom* parameter.
+By calling *[init](http://cdn.temasys.com.sg/skylink/skylinkjs/latest/doc/classes/Skylink.html#method_init)* SkylinkJS starts establishing a signaling connection with our servers and requires your App key as a parameter. This connection introduces new peers and sends control messages as required for the connection and handshake process between peers. You can also pass a *defaultRoom* parameter.
 
 {% highlight javascript %}
 skylink.joinRoom({
@@ -149,7 +149,7 @@ Have fun, share this and let us know if you run into any [issues](http://github.
 
 ## Resources
 
-- [Temasys Developer Console](https://developer.temasys.com.sg) - Get your API key
+- [Temasys Developer Console](https://developer.temasys.com.sg) - Get your App key
 - [Skylink API Documentation](http://cdn.temasys.com.sg/skylink/skylinkjs/latest/doc/classes/Skylink.html)
 - [SkylinkJS version history](https://github.com/Temasys/SkylinkJS/releases)
 - [SkylinkJS source-code on Github](http://github.com/Temasys/SkylinkJS)

@@ -155,16 +155,16 @@ skylink.on('incomingMessage', function(message, peerId, peerInfo, isSelf) {
 ### Step 4: Initialize!
 
 {% highlight javascript %}
-skylink.init('Your API key');
+skylink.init('Your App key');
 {% endhighlight %}
-By calling *[init](http://cdn.temasys.com.sg/skylink/skylinkjs/latest/doc/classes/Skylink.html#method_init)()* SkylinkJS starts establishing a signaling connection with our servers and requires your API key as a parameter. Only after calling this function, you're able to join room contexts.
+By calling *[init](http://cdn.temasys.com.sg/skylink/skylinkjs/latest/doc/classes/Skylink.html#method_init)()* SkylinkJS starts establishing a signaling connection with our servers and requires your App key as a parameter. Only after calling this function, you're able to join room contexts.
 
-If you don't have one yet, you can register and get your own API key using our [Developer Console]([Temasys Developer Console](https://developer.temasys.com.sg). I'm aware you can make a lot fancier of a chat than this, but I think this example shows pretty well that creating a chat is not as hard anymore as it used to be. :) Leave us your feedback in our [developer chat](http://livesupport.temasys.com.sg/)! I'd love to hear from you.
+If you don't have one yet, you can register and get your own App key using our [Developer Console]([Temasys Developer Console](https://developer.temasys.com.sg). I'm aware you can make a lot fancier of a chat than this, but I think this example shows pretty well that creating a chat is not as hard anymore as it used to be. :) Leave us your feedback in our [developer chat](http://livesupport.temasys.com.sg/)! I'd love to hear from you.
 
 
 ## Resources
 
-- [Temasys Developer Console](https://developer.temasys.com.sg) - Get your API key
+- [Temasys Developer Console](https://developer.temasys.com.sg) - Get your App key
 - [Skylink API Documentation](http://cdn.temasys.com.sg/skylink/skylinkjs/latest/doc/classes/Skylink.html)
 - [SkylinkJS version history](https://github.com/Temasys/SkylinkJS/releases)
 - [SkylinkJS source-code on Github](http://github.com/Temasys/SkylinkJS)
