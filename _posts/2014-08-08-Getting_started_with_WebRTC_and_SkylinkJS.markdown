@@ -39,7 +39,7 @@ You identify yourself to the Skylink Infrastructure with your unique <em style="
 
 ### Compatibility and Performance
 
-Only Google Chrome and Mozilla Firefox support the technology natively in their current versions. We thought that wasn't good enough and therefor created plugins for Mac and Windows to upgrade Safari and Internet Explorer to support the current WebRTC standard as well. [They're available for free download here.](https://www.google.com.sg/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=0CBsQFjAA&url=https%3A%2F%2Ftemasys.atlassian.net%2Fwiki%2Fdisplay%2FTWPP%2FWebRTC%2BPlugins&ei=S3LsU6HHHtbj8AXCtYLoCg&usg=AFQjCNGXt5FJ1mNT2bS91Sq00ReyUoXUKQ&sig2=rmls5vwC3S2rM5SzlkcaDQ&bvm=bv.73231344,d.dGc)
+Only Google Chrome and Mozilla Firefox support the technology natively in their current versions. We thought that wasn't good enough and therefor created plugins for Mac and Windows to upgrade Safari and Internet Explorer to support the current WebRTC standard as well. [They're available for free download here.](http://skylink.io/plugin/)
 
 It's still early days for WebRTC, but assuming a modern multi-core processor and broadband internet connection you can reasonably expect to achieve 8-10 peers in an audio/video conference.
 
