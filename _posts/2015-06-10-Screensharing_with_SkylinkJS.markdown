@@ -10,10 +10,10 @@ excerpt: SkylinkJS makes sharing your screen with others incredibly easy to impl
 
 [SkylinkJS](http://skylink.io/web) makes sharing your screen with others during a WebRTC conference or call incredibly easy to implement for web developers. Here is a little demo.
 
-<button onclick="skylink.getUserMedia({video: true});">Get your camera video</button><button id="skylink.shareScreen();">Share your screen</button>
+<button onclick="skylink.getUserMedia({video: true});">Get your camera video</button><button id="skylink.shareScreen();">Share your screen</button><br/>
+<i style="font-size: 0.8em">Works in Chrome 34+, Firefox 33+ and with a commercial version of our [Temasys WebRTC Plugin](http://skylink.io/plugin) in IE10+ and Safari 7.1+</i>
 <div style="border: 1px solid #ddd; background: -webkit-radial-gradient(200px 100px, #fff, #f2f2f2);
 }"><video id="screen" width="100%" autoplay muted></video></div>
-<i style="font-size: 0.8em">Works in Chrome 34+, Firefox 33+ and with a commercial version of our [Temasys WebRTC Plugin](http://skylink.io/plugin) in IE10+ and Safari 7.1+</i>
 <script src="//cdn.temasys.com.sg/skylink/skylinkjs/0.6.x/skylink.complete.js"></script>
 <script async src="/resources/js/screenshare.js" defer></script>
 
