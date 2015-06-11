@@ -168,6 +168,6 @@ If you don't have one yet, you can register and get your own App key using our [
 - [Skylink API Documentation](http://cdn.temasys.com.sg/skylink/skylinkjs/latest/doc/classes/Skylink.html)
 - [SkylinkJS version history](https://github.com/Temasys/SkylinkJS/releases)
 - [SkylinkJS source-code on Github](http://github.com/Temasys/SkylinkJS)
-- [How to get support or contribute](http://temasys.github.io/support)
+- [How to get support or contribute](https://developer.temasys.com.sg/support)
 
 

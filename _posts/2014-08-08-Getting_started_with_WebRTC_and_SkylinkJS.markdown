@@ -153,7 +153,7 @@ Have fun, share this and let us know if you run into any [issues](http://github.
 - [Skylink API Documentation](http://cdn.temasys.com.sg/skylink/skylinkjs/latest/doc/classes/Skylink.html)
 - [SkylinkJS version history](https://github.com/Temasys/SkylinkJS/releases)
 - [SkylinkJS source-code on Github](http://github.com/Temasys/SkylinkJS)
-- [How to get support or contribute](http://temasys.github.io/support)
+- [How to get support or contribute](https://developer.temasys.com.sg/support)
 - [Getaroom.io tech-demo built using React and SkylinkJS](http://getaroom.io)
 
 
