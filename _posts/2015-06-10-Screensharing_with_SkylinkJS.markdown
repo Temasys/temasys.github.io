@@ -12,8 +12,7 @@ excerpt: SkylinkJS makes sharing your screen with others incredibly easy to impl
 
 <button onclick="shareCamera()">Get your camera video</button><button onclick="shareScreen()">Share your screen</button><br/>
 <i style="font-size: 0.8em">Works in Chrome 34+, Firefox 33+ and with a commercial version of our [Temasys WebRTC Plugin](http://skylink.io/plugin) in IE10+ and Safari 7.1+</i>
-<div style="border: 1px solid #ddd; background: -webkit-radial-gradient(200px 100px, #fff, #f2f2f2);
-}"><video id="screen" width="100%" autoplay muted></video></div>
+<div style="border: 1px solid #ddd; background: -webkit-radial-gradient(200px 100px, #fff, #f2f2f2); background: -moz-radial-gradient(200px 100px, #fff, #f2f2f2); background: radial-gradient(200px 100px, #fff, #f2f2f2);"><video id="screen" width="100%" autoplay muted></video></div>
 <script src="//cdn.temasys.com.sg/adapterjs/0.11.x/adapter.screenshare.js"></script>
 <script async src="/resources/js/screenshare.js" defer></script>
 
