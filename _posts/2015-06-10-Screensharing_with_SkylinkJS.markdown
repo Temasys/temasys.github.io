@@ -17,7 +17,7 @@ excerpt: SkylinkJS makes sharing your screen with others incredibly easy to impl
 <script async src="/resources/js/screenshare.js" defer></script>
 
 
-Let's run through and build a simple conferencing website to show how easy it is. [Run the demo](https://codepen.io/serrynaimo/debug/bdRWNR) in two of your browser tabs to send a receive the screen.
+Let's run through and build a simple conferencing website to show how easy it is. [Run the demo](https://codepen.io/serrynaimo/full/bdRWNR/) in two of your browser tabs to send a receive the screen.
 
 
 ### Step 1: Include SkylinkJS into your website
