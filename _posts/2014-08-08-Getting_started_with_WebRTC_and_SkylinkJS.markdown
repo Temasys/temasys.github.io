@@ -63,7 +63,7 @@ To identify yourself against our API, you'll need to sign up through our [Develo
 <head>
     <title>WebRTC with SkylinkJS</title>
 
-    <script src="//cdn.temasys.com.sg/skylink/skylinkjs/0.5.x/skylink.complete.min.js"></script>
+    <script src="//cdn.temasys.com.sg/skylink/skylinkjs/0.6.x/skylink.complete.min.js"></script>
 </head>
 <body>
 

@@ -25,7 +25,7 @@ I'm using our open-source [SkylinkJS](https://github.com/Temasys/SkylinkJS) libr
 <head>
     <title>WebRTC chat with SkylinkJS</title>
 
-    <script src="//cdn.temasys.com.sg/skylink/skylinkjs/0.5.x/skylink.complete.min.js"></script>
+    <script src="//cdn.temasys.com.sg/skylink/skylinkjs/0.6.x/skylink.complete.min.js"></script>
 </head>
 <body>
 
