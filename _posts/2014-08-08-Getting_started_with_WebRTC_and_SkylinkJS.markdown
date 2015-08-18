@@ -126,16 +126,15 @@ skylink.on('mediaAccessSuccess', function(stream) {
 skylink.init({
   apiKey: 'Your App key',
   defaultRoom: 'Pick a room name'
+}, function() {
+  skylink.joinRoom({
+    audio: true,
+    video: true
+  });
 });
 {% endhighlight %}
 By calling *[init](http://cdn.temasys.com.sg/skylink/skylinkjs/latest/doc/classes/Skylink.html#method_init)* SkylinkJS starts establishing a signaling connection with our servers and requires your App key as a parameter. This connection introduces new peers and sends control messages as required for the connection and handshake process between peers. You can also pass a *defaultRoom* parameter.
 
-{% highlight javascript %}
-skylink.joinRoom({
-    audio: true,
-    video: true
-});
-{% endhighlight %}
 *[joinRoom](http://cdn.temasys.com.sg/skylink/skylinkjs/latest/doc/classes/Skylink.html#method_joinRoom)* then tells our servers that you now want to inform the other peers in the room, that you're joining and you are able to specify the features that you want to have enabled. In this case we establish both audio and video streams. You don't need to pass anything if you just want to send chat messages or data streams.
 
 
