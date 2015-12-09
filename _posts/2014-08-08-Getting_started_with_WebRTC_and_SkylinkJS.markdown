@@ -12,8 +12,8 @@ You may have heard of WebRTC and its magical abilities recently and, like many, 
 
 Here is an example codepen that we've created that shows how you can create a very simple audio/video conference with merely 35 lines of JavaScript client-side code, with no additional server-code required.
 
-<p data-height="370" data-theme-id="7751" data-slug-hash="nKvBu" data-default-tab="result" class='codepen'>See the Pen <a href='http://codepen.io/serrynaimo/pen/nKvBu/'>WebRTC with SkylinkJS</a> by Thomas Gorissen (<a href='http://codepen.io/serrynaimo'>@serrynaimo</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
-<script async src="//codepen.io/assets/embed/ei.js"></script>
+<p data-height="268" data-theme-id="0" data-slug-hash="GogabE" data-default-tab="result" data-user="temasys" class='codepen'>See the Pen <a href='https://codepen.io/temasys/pen/GogabE/'>WebRTC Audio/Video conference demo with SkylinkJS</a> by Temasys (<a href='https://codepen.io/temasys'>@temasys</a>) on <a href='https://codepen.io'>CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 
 To further demonstrate the possibilities and flexibility of SkylinkJS, I've also created a more elaborate demo created with the help of [Facebooks React](http://facebook.github.io/react/) at [http://getaroom.io](http://getaroom.io). Check it out, share it, and and use it if you like it.
 
