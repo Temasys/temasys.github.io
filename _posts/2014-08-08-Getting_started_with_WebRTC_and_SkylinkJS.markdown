@@ -8,15 +8,14 @@ excerpt: Building a simple audio/video conferencing website that doesn't need an
 
 ---
 
-You may have heard of WebRTC and its magical abilities recently and, like many, you might have found yourself struggling with trying to get even a simple demo going. The team here at Temasys built SkylinkJS to address this and make it easy to build reliable peer connectivity solutions on any website with the help of WebRTC.
+You may have heard of WebRTC and its magical abilities recently and, like many, you might have found yourself struggling with trying to get even a simple demo going. The team here at Temasys built SkylinkJS to address this and make it easy to build reliable peer connectivity solutions on any website, with the help of WebRTC. This post will help people who are getting started with WebRTC.
 
-Here is an example codepen that we've created that shows how you can create a very simple audio/video conference with merely 35 lines of JavaScript client-side code, with no additional server-code required.
+Here is an example Codepen that we’ve created that shows how you can create a very simple audio/video conference with JavaScript client-side code, with no additional server code required.
 
 <p data-height="268" data-theme-id="0" data-slug-hash="GogabE" data-default-tab="result" data-user="temasys" class='codepen'>See the Pen <a href='https://codepen.io/temasys/pen/GogabE/'>WebRTC Audio/Video conference demo with SkylinkJS</a> by Temasys (<a href='https://codepen.io/temasys'>@temasys</a>) on <a href='https://codepen.io'>CodePen</a>.</p>
 <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 
-To further demonstrate the possibilities and flexibility of SkylinkJS, I've also created a more elaborate demo created with the help of [Facebooks React](http://facebook.github.io/react/) at [http://getaroom.io](http://getaroom.io). Check it out, share it, and and use it if you like it.
-
+To further demonstrate the possibilities and flexibility of SkylinkJS, we have also created a more elaborate demo created with the help of [Facebook's React](http://facebook.github.io/react/) at [http://getaroom.io](http://getaroom.io). Check it out, share it, and use it if you like it.
 
 
 
@@ -24,29 +23,30 @@ To further demonstrate the possibilities and flexibility of SkylinkJS, I've also
 
 ### Skylink: BaaS for multi-media peer connectivity
 
-Temsys has created the super scalable Skylink backend-as-a-service that helps to connect two or more peers very reliably and easily. It was designed specifically for [WebRTC](http://en.wikipedia.org/wiki/WebRTC), which enables your browser to send data directly to another browser. That data can be a chat message, a file or even an audio/video stream from your devices camera and microphone thus allowing you to create all kinds of cool real-time video conferencing, collaboration, tutoring and other live-presence use-cases.
+Temasys has created the super scalable Skylink backend-as-a-service, that helps to connect two or more peers very reliably and easily. It was designed specifically for [WebRTC](http://en.wikipedia.org/wiki/WebRTC), which enables your browser to send data directly to another browser. That data can be a chat message, a file or even an audio/video stream from your device’s camera and microphone, thus allowing you to create all kinds of cool real-time video conferencing, collaboration, tutoring, and other live-presence use-cases.
 
 ### The SkylinkJS library
 
-WebRTC is still a rather low-level browser API and requires you to do significant work around solving signaling issues and resolving differences in implementation between web browsers. We at Temasys are part of the [WebRTC working group at the W3C](http://www.w3.org/2011/04/webrtc-charter.html) and create solutions with and around WebRTC for more than a year now. We know this part of the puzzle inside and out, and that is why we have created SkylinkJS. We want to solve the connectivity and implementation headaches for you and let you focus on building the cool stuff.
+WebRTC is still a rather low-level browser API and requires you to do significant work around solving signaling issues and resolving differences in implementation between web browsers. We, at Temasys, are part of the [WebRTC working group at the W3C](http://www.w3.org/2011/04/webrtc-charter.html) at the W3C, and create solutions with and around WebRTC for more than a year, now. We know this part of the puzzle inside and out, and that is why we have created SkylinkJS. We want to solve the connectivity and implementation headaches for you and let you focus on building the cool stuff.
 
-### App keys, alias keys, realms, rooms and peers
 
-<img src="/resources/img/realmsandrooms.png" style="float:left; margin-right: 20px;" />When you use SkylinkJS in your <em style="color: MediumVioletRed; background-color: #fff; border: 1px solid MediumVioletRed;">website</em> or <em style="color: MediumVioletRed; background-color: #fff; border: 1px solid MediumVioletRed;">app</em>, you can invite users (we call them <em style="color: goldenrod; background-color: #fff; border: 1px solid goldenrod;">peers</em>) to join a shared space in which they can exchange data privately with each other. We call this space a <em style="color: firebrick; background-color: #fff; border: 1px solid firebrick;">room</em>. Every peer that wants to join a room needs to know its unique identifier, like a secure, generated token or a simple name. We leave it up to you on how you come up with these room IDs and how you inform peers about them. One of our primary goals in SkylinkJS was to not interfere with your application logic or UX. We recommend generating [UUIDs](http://jsfiddle.net/briguy37/2MVFd/) as a best-practice here for making the identifiers difficult to guess, reasonably unique and providing an additional layer of privacy of your users during room sessions.
+### App keys, rooms, and peers
+When you use SkylinkJS in your  <em style="color: MediumVioletRed; background-color: #fff; border: 1px solid MediumVioletRed;">website</em> or <em style="color: MediumVioletRed; background-color: #fff; border: 1px solid MediumVioletRed;">app</em>, you can invite users (we call them <em style="color: goldenrod; background-color: #fff; border: 1px solid goldenrod;">peers</em>) to join a shared space in which they can exchange data privately with each other. We call this space a <em style="color: firebrick; background-color: #fff; border: 1px solid firebrick;">room</em>. Every peer that wants to join a room needs to know its’ unique identifier, like a secure, generated token or a simple name. We leave it up to you on how you come up with these room IDs and how you inform peers about them. One of our primary goals in SkylinkJS was to not interfere with your application logic or UX. We recommend generating [UUIDs](http://jsfiddle.net/briguy37/2MVFd/) as a best-practice here, for making the identifiers difficult to guess, reasonably unique and providing an additional layer of privacy of your users during room sessions.
 
-You identify yourself to the Skylink Infrastructure with your unique <em style="color: mediumblue; background-color: #fff; border: 1px solid mediumblue;">App key</em> that you can create in our [Developer Console](https://developer.temasys.com.sg) or via our REST API. Every App key creates a new <em style="color: darkgreen; background-color: #fff; border: 1px solid darkgreen;">realm</em> in which your rooms can exist. Every App key will only work on your specified [CORS domain name](http://en.wikipedia.org/wiki/Cross-origin_resource_sharing). If you want to have a different website or app access the same realm and therefor the same rooms, you are also able to create <em style="color: mediumblue; background-color: #fff; border: 1px solid mediumblue;">alias keys</em> that extend the scope of the realm to other domains or simply isolate your apps various flavors for logging and reporting purposes.
+In order to start using the Skylink, you would need to create an <em style="color: mediumblue; background-color: #fff; border: 1px solid mediumblue;">Application</em> using our Developer Console or REST API. Every application creates a new <em style="color: goldenrod; background-color: #fff; border: 1px solid goldenrod;">realm</em> in which your rooms can exist. You can now create unique <em style="color: MediumVioletRed; background-color: #fff; border: 1px solid MediumVioletRed;">App Keys</em> under the application you have created. These keys are then used to help you identify yourself to the Skylink Infrastructure. Every App key for the Web platform will only work on your specified [CORS domain name](http://en.wikipedia.org/wiki/Cross-origin_resource_sharing). If you want to have different websites or applications on different platforms(such as android/ios) to access the same <em style="color: goldenrod; background-color: #fff; border: 1px solid goldenrod;">realm</em> and therefore the same <em style="color: MediumVioletRed; background-color: #fff; border: 1px solid MediumVioletRed;">rooms</em>, you can create multiple <em style="color: MediumVioletRed; background-color: #fff; border: 1px solid MediumVioletRed;">keys</em> under the same application – one for each platform. This extends the scope of the realm to other domain or applications.
+
+Read more about creating a new application [here](http://support.temasys.com.sg/solution/articles/12000012799).
 
 
 ### Compatibility and Performance
 
-Only Google Chrome and Mozilla Firefox support the technology natively in their current versions. We thought that wasn't good enough and therefor created plugins for Mac and Windows to upgrade Safari and Internet Explorer to support the current WebRTC standard as well. [They're available for free download here.](http://skylink.io/plugin/)
+Only Google Chrome and Mozilla Firefox support the technology natively in their current versions. We thought that wasn’t good enough and therefore created plugins for Mac and Windows, to upgrade Safari and Internet Explorer to support the current WebRTC standard as well. [They’re available to download for free.](http://skylink.io/plugin/)
 
-It's still early days for WebRTC, but assuming a modern multi-core processor and broadband internet connection you can reasonably expect to achieve 8-10 peers in an audio/video conference.
+It’s still early days for WebRTC, but assuming a modern multi-core processor and broadband internet connection, you can reasonably expect to achieve 8-10 peers in an audio/video conference.
 
-Chrome for Android supports WebRTC as well, but however due to the less powerful CPUs found in the many mobile devices an expectation of three peers is more likely with more possible on latest devices with hardware VP8 acceleration. Users on iOS and other mobile OS will still have to wait a bit longer for support.
+Chrome for Android supports WebRTC as well, but however due to the less powerful CPUs found in many mobile devices, one can expect around three peers or less, to be supported. Latest devices with hardware VP8 acceleration would be more likely to support additional peers. Users on iOS and other mobile OS browsers will still have to wait a bit longer for support.
 
-To see it in action, try it out yourself in with our tech-demo at [http://getaroom.io](http://getaroom.io) on your Android smart-phone or tablet in a WebRTC enabled browser.
-
+To see it in action, try it out yourself in with our tech-demo at [http://getaroom.io](http://getaroom.io) on your Android smartphone or tablet in a WebRTC enabled browser.
 
 
 
@@ -54,7 +54,8 @@ To see it in action, try it out yourself in with our tech-demo at [http://getaro
 
 ### Step 1: Get an App key
 
-To identify yourself against our API, you'll need to sign up through our [Developer Console](https://developer.temasys.com.sg) and get an App key. During our current beta phase, the usage of our platform is free, however once we are out of beta there is going to be a very affordable charge for our infrastructure services. In any case, newly created primary App keys come with a substantial allotment of free use to allow you to build, experiment, and test without up-front costs.
+To identify yourself against our API, you’ll need to sign up through our [Developer Console](https://developer.temasys.com.sg) and get an App key. During our current beta phase, the usage of our platform is free, however, once we are out of beta, there is going to be a very affordable charge for our infrastructure services. In any case, newly created primary App keys come with a substantial allotment of free use to allow you to build, experiment, and test without up-front costs.
+
 
 ### Step 2: Include SkylinkJS into your website
 
@@ -73,9 +74,10 @@ To identify yourself against our API, you'll need to sign up through our [Develo
 </html>
 {% endhighlight %}
 
-Here you have the choice to use our "Complete" version with all dependencies or, if you want to do dependency management yourself with e.g. [RequireJS](http://requirejs.org/) or other client-side package managers, the "Library" version. [Here is an overview of these files](https://github.com/Temasys/SkylinkJS/releases).
+Here you have the choice to use our “Complete” version with all dependencies or if you want to do dependency management yourself with e.g. [RequireJS](http://requirejs.org/) or other client-side package managers, the “Library” version. [Here is an overview of these files](https://github.com/Temasys/SkylinkJS/releases).
 
-In our simple example above, we just include the complete version in a script tag in the header. The body itself only contains a video tag to show your own camera picture later. We used a CSS transform to mirror the image so it feels more natural and muted the audio, so you don't hear yourself speaking. The *autoplay* attribute is needed in some browsers where you'd otherwise only see a picture of yourself.
+
+In our simple example above, we just include the complete version in a script tag in the header. The body itself only contains a video tag to show your own camera picture later. We used a CSS transform to mirror the image so it feels more natural and muted the audio, so you don’t hear yourself speaking. The autoplay attribute is needed in some browsers where you’d otherwise only see a picture of yourself.
 
 
 ### Step 3: Instantiate Skylink and subscribe events
